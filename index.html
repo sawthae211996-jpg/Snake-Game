@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4ade80">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>မြွေဂိမ်း</title>
@@ -196,5 +198,9 @@ function loop(t) {
 init();
 requestAnimationFrame(loop);
 </script>
-</body>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script></body>
   </html>
